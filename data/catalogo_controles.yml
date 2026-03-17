@@ -1,0 +1,839 @@
+version: '0.1'
+controles:
+- id: org.1
+  titulo: Política de seguridad
+  preguntas:
+  - id: q1
+    texto: ¿Se dispone en la organización de una Política de Seguridad de la Información (PSI) o, en su caso, se ha adherido a la política de seguridad de la institución de la que depende o está vinculada?
+    min_level: BASICA
+  - id: q2
+    texto: La Política de Seguridad de la Información (PSI) ¿Está estructurada de forma que incluya, con claridad, al menos el contenido que señala el RD 311/2022, de 3 de mayo?
+    min_level: BASICA
+- id: org.2
+  titulo: Normativa de seguridad
+  preguntas:
+  - id: q1
+    texto: '¿Se dispone de normativa interna de la organización donde se determine el uso correcto de equipos, servicios e instalaciones, así como lo que se considera uso indebido? NOTA: Aunque se pueda contar con diferentes documentos conteniendo normativa especializada de seguridad, se considera muy útil disponer de un documento consolidado, aunque esté más resumido, que pueda difundirse internamente, a disposición de empleados y colaboradores.'
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se dispone de documentación de seguridad, desarrollada según lo reflejado en las guías CCN-STIC que resulten de aplicación?
+    min_level: MEDIA
+- id: org.3
+  titulo: Procedimientos de seguridad
+  preguntas:
+  - id: q1
+    texto: ¿Se dispone de un conjunto de procedimientos documentados que determinan cómo realizar las tareas habituales?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Además de su aprobación por la propia organización, se han validado los procedimientos de seguridad por la autoridad correspondiente?
+    min_level: MEDIA
+- id: org.4
+  titulo: Proceso de autorización
+  preguntas:
+  - id: q1
+    texto: '¿Se registran las autorizaciones concedidas a efectos de trazabilidad, siguiendo un procedimiento formal establecido en la organización? NOTA: Puede llegar a emplearse una herramienta de ''ticketing'', quizá la misma que se emplea para la gestión de incidentes o peticiones de servicio, habitualmente diferenciando los diferentes tipos de registro, de modo que quede constancia al menos de qué se ha autorizado, a quién, cuando, por quién y en qué intervalo temporal. No obstante, no es imprescindible unificar todos los flujos de autorización, aunque deseable, pudiéndose emplear modelos de solicitud (formularios) en diferentes formatos.'
+    min_level: BASICA
+- id: op.pl.1
+  titulo: Análisis de riesgos
+  preguntas:
+  - id: q1
+    texto: '¿Se dispone de un análisis de riesgos documentado, cuya última iteración se ha realizado en fecha adecuada? NOTA: El análisis de riesgos debe realizarse al menos una vez al año o siempre que el sistema de información experimente cambios relevantes.'
+    min_level: BASICA
+  - id: q2
+    texto: 'Para categoría MEDIA, ¿Se ha realizado un análisis de riesgos semiformal, con una metodología específica en base a un catálogo básico de amenazas y una semántica definida? NOTA: Puede estar basado en hojas Excel o en una herramienta como puede ser PILAR.'
+    min_level: MEDIA
+  - id: q3
+    texto: Para categoría ALTA, ¿se ha realizado un análisis de riesgos formal, con una metodología específica en base a un fundamento matemático estandarizado y reconocido internacionalmente?
+    min_level: ALTA
+- id: op.pl.2
+  titulo: Arquitectura de seguridad
+  preguntas:
+  - id: q1
+    texto: ¿Se dispone de documentación y diagramas en el ámbito del sistema de información, incluyendo instalaciones físicas, equipos, comunicaciones y líneas de defensa?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se dispone de un sistema de gestión de seguridad de la información aplicado sobre el/los sistemas(s) de información?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se dispone de un sistema de gestión de seguridad de la información, orientado a la mejora continua, aplicado sobre el/los sistemas(s) de información?
+    min_level: ALTA
+  - id: q4
+    texto: ¿Se dispone de controles técnicos internos para aumentar la seguridad?
+    min_level: ALTA
+- id: op.pl.3
+  titulo: Adquisición de nuevos componentes
+  preguntas:
+  - id: q1
+    texto: ¿Se realiza una planificación previa a la adquisición de nuevos componentes del sistema, teniendo en cuenta, por ejemplo, la obsolescencia de los actualmente en producción, la finalización de contratos, los cambios del contexto, etc.?
+    min_level: BASICA
+- id: op.pl.4
+  titulo: Dimensionamiento / gestión de la capacidad
+  preguntas:
+  - id: q1
+    texto: sistema ¿se consideran las necesidades de capacidad?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se puede evidenciar que el estudio de capacidad no solo se realiza con carácter previo a la entrada en producción del sistema, sino que se mantiene actualizado durante todo el ciclo de vida del mismo?
+    min_level: MEDIA
+- id: op.pl.5
+  titulo: Componentes certificados
+  preguntas:
+  - id: q1
+    texto: ¿Se utiliza el Catálogo de Productos y Servicios de Seguridad de las Tecnologías de la Información y Comunicación (CPSTIC) del CCN, para seleccionar los productos o servicios suministrados por un tercero que deban formar parte de la arquitectura de seguridad del sistema?
+    min_level: BASICA
+  - id: q2
+    texto: '¿Se protege la información frente a amenazas TEMPEST de acuerdo a la normativa en vigor? NOTA: Se entiende por amenazas TEMPEST aquellas emanaciones comprometedoras, como son las emisiones electromagnéticas no intencionadas, producidas por equipos eléctricos y electrónicos que, detectadas y analizadas, puedan llevar a la obtención de información por cauces no previstos. NOTA: Un método utilizado a menudo para la protección TEMPEST es el acondicionamiento de equipos y locales con diferentes sistemas de apantallamiento, ya sean temporales o permanentes. Algunos de los sistemas más utilizados son: • Armarios apantallados • Salas apantalladas.'
+    min_level: MEDIA
+  - id: q3
+    texto: '¿Cada producto y servicio incluye en su descripción una lista de componentes software empleados (módulos, librerías, etc.), acorde a lo especificado en [mp.sw.1.r5]? NOTA: El objetivo de esta medida es llegar a determinar que una vulnerabilidad anunciada (CVE), detectada en un módulo, componente o librería de desarrollo, pueda tener afectación a las aplicaciones actualmente empleadas en la organización.'
+    min_level: ALTA
+- id: op.acc.1
+  titulo: Identificación
+  preguntas:
+  - id: q1
+    texto: ¿Se dispone de un control de acceso comprendiendo un conjunto de actividades preparatorias y ejecutivas tendentes a permitir o denegar a una entidad, usuario o proceso, el acceso a un recurso del sistema para la realización de cualquier acción?
+    min_level: BASICA
+  - id: q2
+    texto: ¿La identificación del usuario permite al Responsable del sistema y/o al Responsable de la seguridad del sistema singularizar a la persona asociada al mismo, así como sus responsabilidades en el sistema?
+    min_level: MEDIA
+- id: op.acc.2
+  titulo: Requisitos de acceso
+  preguntas:
+  - id: q1
+    texto: ¿Los recursos del sistema están protegidos con algún mecanismo que impida su utilización, salvo por las entidades que disfruten de derechos de acceso suficientes?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se gestionan los privilegios de los usuarios de forma armonizada con los recursos del sistema a los que tengan, o no, necesidad de acceder?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se dispone de soluciones que permiten establecer controles de acceso a los dispositivos en función de la política de seguridad de la organización?
+    min_level: ALTA
+- id: op.acc.3
+  titulo: Segregación de funciones y tareas
+  preguntas:
+  - id: q1
+    texto: ¿Se segregan aquellas funciones que, ante determinadas circunstancias, podrían culminar en conflicto de interés como, por ejemplo, desarrollo y operación?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se previenen más circunstancias de conflicto de interés, como puede ser, evitando concurran las funciones de configuración y las de mantenimiento?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se controlan las cuentas con privilegios y los mecanismos desde los cuales se pueden autenticar?
+    min_level: ALTA
+  - id: q4
+    texto: ¿Se controlan el acceso a la información de seguridad del sistema?
+    min_level: ALTA
+- id: op.acc.4
+  titulo: Proceso de gestión de derechos de acceso
+  preguntas:
+  - id: q1
+    texto: ¿Se gestionan los derechos de acceso, en base al principio de mínimo privilegio?
+    min_level: BASICA
+- id: op.acc.5
+  titulo: Mecanismos de autenticación (usuarios externos)
+  preguntas:
+  - id: q1
+    texto: ¿Se mantiene la seguridad de las cuentas y las credenciales de los usuarios externos, mediante mecanismos de control de acceso?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se emplea una contraseña como mecanismo de autenticación, con garantías razonables?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se requiere una contraseña de un solo uso (OTP) como complemento a la contraseña de usuario?
+    min_level: ALTA
+  - id: q4
+    texto: ¿Se emplean certificados cualificados como mecanismo de autenticación?
+    min_level: ALTA
+  - id: q5
+    texto: ¿Se emplean certificados en soporte físico (tarjeta o similar) como mecanismo de autenticación?
+    min_level: ALTA
+  - id: q6
+    texto: ¿Se registran los accesos, o su intento, y se informa al usuario?
+    min_level: ALTA
+  - id: q7
+    texto: ¿Se definen puntos en los que el sistema requiere una renovación de la autenticación del usuario?
+    min_level: ALTA
+  - id: q8
+    texto: ¿Se suspenden las credenciales tras un período definido de no utilización?
+    min_level: ALTA
+- id: op.acc.6
+  titulo: Mecanismos de autenticación (usuarios de la organización)
+  preguntas:
+  - id: q1
+    texto: ¿Se dispone implementados mecanismos de control de acceso, alineados con el proceso de altas y bajas de empleados / usuarios internos de la organización?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se emplea una contraseña como mecanismo de autenticación, con garantías razonables?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se requiere un segundo factor tal como «algo que se tiene», es decir, un dispositivo, una contraseña de un solo uso (OTP, en inglés) como complemento a la contraseña de usuario, o «algo que se es»?
+    min_level: ALTA
+  - id: q4
+    texto: ¿Se emplean certificados cualificados como mecanismo de autenticación?
+    min_level: ALTA
+  - id: q5
+    texto: ¿Se emplean certificados cualificados en soporte físico (tarjeta o similar) como mecanismo de autenticación?
+    min_level: ALTA
+  - id: q6
+    texto: '¿Se requiere un doble factor de autenticación para el acceso desde zonas no controladas (R2, R3 o R4)? NOTA: Se entiende por zona controlada aquella que no es de acceso público, sino que para llegar al equipo desde el que se accede, el usuario se ha identificado de alguna forma (control de acceso a las instalaciones) diferente al mecanismo de autenticación lógica frente al sistema.'
+    min_level: ALTA
+  - id: q7
+    texto: Respecto a los accesos remotos ¿Se contemplan aspectos de seguridad y autorización?
+    min_level: ALTA
+  - id: q8
+    texto: ¿Se registran las trazas de acceso y se informa de la más reciente al usuario?
+    min_level: ALTA
+  - id: q9
+    texto: ¿Se han definido aquellos puntos en los que el sistema requiere de una renovación de la autenticación del usuario, mediante identificación singular, no bastando con la sesión establecida?
+    min_level: ALTA
+  - id: q10
+    texto: ¿Se suspenden las credenciales tras un periodo definido de no utilización?
+    min_level: ALTA
+- id: op.exp.1
+  titulo: Inventario de activos
+  preguntas:
+  - id: q1
+    texto: '¿Se dispone de un inventario de todos los elementos del sistema? NOTA: Es admisible el concepto de inventario federado, que consiste en la suma de varios inventarios independientes que en su conjunto constituyen el inventario completo, aunque siempre es más efectivo disponer de un único inventario con diferentes criterios de acceso a los activos.'
+    min_level: BASICA
+  - id: q2
+    texto: ¿Forma parte del inventario el etiquetado del equipamiento y del cableado?
+    min_level: MEDIA
+  - id: q3
+    texto: '¿Se dispone de herramientas que permitan visualizar de forma continua el estado de todos los equipos en la red? NOTA: en particular, interesa visualizar al menos servidores y dispositivos de red y de comunicaciones.'
+    min_level: ALTA
+  - id: q4
+    texto: '¿Se dispone de herramientas que permitan categorizar los activos críticos por contexto de la organización y riesgos de seguridad? NOTA: Un inventario puede ser textual o gráfico (mostrando relaciones entre activos y sus dependencias); en este segundo caso estaríamos refiriéndonos a una Base de Datos de Gestión de la Configuración (CMDB). La identificación de activos de algunas herramientas de gestión de riesgos, disponen de algunas de dichas funcionalidades.'
+    min_level: ALTA
+  - id: q5
+    texto: ¿Se mantiene actualizada una relación formal de los componentes software de terceros, empleados en el despliegue del sistema? Nota Esta lista incluirá librerías software y los servicios requeridos para su despliegue (plataforma o entorno operacional).
+    min_level: ALTA
+- id: op.exp.2
+  titulo: Configuración de seguridad
+  preguntas:
+  - id: q1
+    texto: ¿Se realiza una configuración de seguridad (bastionado) a los equipos, previamente a su puesta en producción?
+    min_level: BASICA
+- id: op.exp.3
+  titulo: Gestión de la configuración de seguridad
+  preguntas:
+  - id: q1
+    texto: ¿Se gestiona de forma continua la configuración de los componentes del sistema?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se dispone, para los componentes del sistema, de configuraciones autorizadas, mantenidas y verificadas, junto a la identificación de servicios autorizados?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se han establecido responsabilidades sobre la configuración de seguridad del sistema?
+    min_level: ALTA
+  - id: q4
+    texto: ¿Se realizan copias de seguridad de la configuración del sistema?
+    min_level: ALTA
+  - id: q5
+    texto: ¿Se mantiene actualizada la configuración de seguridad del sistema operativo y de las aplicaciones?
+    min_level: ALTA
+  - id: q6
+    texto: ¿Se dispone de herramientas de monitorización de la seguridad?
+    min_level: ALTA
+- id: op.exp.4
+  titulo: Mantenimiento y actualizaciones de seguridad
+  preguntas:
+  - id: q1
+    texto: ¿Se realiza, de forma sistemática, el mantenimiento del equipamiento físico y lógico del sistema?
+    min_level: BASICA
+  - id: q2
+    texto: Antes de poner en producción una nueva versión o una versión parcheada, ¿se comprueba en un entorno de prueba controlado, consistente en cuanto a configuración con el entorno de producción, que la nueva instalación funciona correctamente y no disminuye la eficacia de las funciones necesarias para el trabajo diario?
+    min_level: MEDIA
+  - id: q3
+    texto: Antes de la aplicación de las configuraciones, parches y actualizaciones de seguridad, ¿se prevé un mecanismo de vuelta atrás para revertirlos en caso de la aparición de efectos adversos?
+    min_level: ALTA
+  - id: q4
+    texto: ¿Se comprueba de forma periódica la actualización e integridad del firmware utilizado en los dispositivos hardware del sistema (infraestructura de red, BIOS, etc.)?
+    min_level: ALTA
+  - id: q5
+    texto: '¿Se despliega una estrategia de monitorización continua de amenazas? NOTA: ¿Esta detalla los indicadores críticos de seguridad a emplear, la política de aplicación de parches de seguridad y los criterios de revisión regular y excepcional de las amenazas sobre el sistema?'
+    min_level: ALTA
+- id: op.exp.5
+  titulo: Gestión de cambios
+  preguntas:
+  - id: q1
+    texto: ¿Se gestionan los cambios que se realizan en el sistema de información?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se prevé algún mecanismo de vuelta atrás de los cambios, se documentan éstos y se notifican al Responsable de Seguridad los fallos detectados?
+    min_level: MEDIA
+- id: op.exp.6
+  titulo: Protección frente a código dañino
+  preguntas:
+  - id: q1
+    texto: ¿Se dispone de una solución de protección contra código dañino (antivirus, EDR o solución similar) desplegada en todos los puestos de trabajo, servidores y elementos perimetrales del sistema?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se ejecutan análisis y escaneos, de forma regular en los sistemas, en búsqueda de código dañino?
+    min_level: MEDIA
+  - id: q3
+    texto: Al arrancar los sistemas, ¿se analizan las funciones críticas en prevención de modificaciones no autorizadas?
+    min_level: ALTA
+  - id: q4
+    texto: ¿Se ha implementado una lista blanca que impida la ejecución de aplicaciones no autorizadas previamente y, en consecuencia, que no estén en dicha lista?
+    min_level: ALTA
+  - id: q5
+    texto: ¿Se han implementado soluciones de seguridad orientadas a detectar, investigar y resolver actividades sospechosas en los equipos (EDR - Endpoint Defense and Response)?
+    min_level: ALTA
+  - id: q6
+    texto: ¿La solución antimalware, además de implementar protección en tiempo real, permite realizar configuraciones avanzadas y revisar el sistema al arrancar, así como cada vez que se conecte algún dispositivo extraíble?
+    min_level: ALTA
+- id: op.exp.7
+  titulo: Gestión de incidentes
+  preguntas:
+  - id: q1
+    texto: ¿Se dispone de un proceso integral para tratar los incidentes que puedan tener un impacto en la seguridad del sistema?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se dispone de soluciones de ventanilla única para la notificación de incidentes al CCN-CERT? ¿permite la distribución de notificaciones a las diferentes entidades de manera federada, si es el caso, utilizando para ello dependencias administrativas jerárquicas?
+    min_level: MEDIA
+  - id: q3
+    texto: El proceso integral para hacer frente a los incidentes que puedan tener un impacto en la seguridad del sistema, ¿consiste en una completa gestión de los mismos?
+    min_level: ALTA
+  - id: q4
+    texto: ¿Dispone la organización de recursos para la configuración dinámica del sistema, reaccionando a anuncios de ciberamenazas y/o a la detección de las mismas?
+    min_level: ALTA
+  - id: q5
+    texto: ¿Se dispone de herramientas que automaticen el proceso de prevención y respuesta, mediante la detección e identificación de anomalías, segmentación dinámica de la red para reducir la superficie de ataque, el aislamiento de dispositivos críticos, etc.?
+    min_level: ALTA
+- id: op.exp.8
+  titulo: Registro de la actividad
+  preguntas:
+  - id: q1
+    texto: ¿Se registran los eventos y actividades de usuarios y entidades que acceden a los sistemas?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se gestionan los registros de actividad?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se sincronizan los relojes del sistema?
+    min_level: ALTA
+  - id: q4
+    texto: En la documentación de seguridad del sistema, ¿se indican los eventos de seguridad que serán auditados y el tiempo de retención de los registros antes de ser eliminados?
+    min_level: ALTA
+  - id: q5
+    texto: Los registros de actividad y, en su caso, las copias de seguridad ¿únicamente pueden ser accedidos, alterarse o eliminarse por personal debidamente autorizado?
+    min_level: ALTA
+  - id: q6
+    texto: ¿Se dispone de herramientas para apoyar la gestión de los registros de actividad?
+    min_level: ALTA
+- id: op.exp.9
+  titulo: Registro de la gestión de incidentes
+  preguntas:
+  - id: q1
+    texto: ¿Se realiza un proceso de extracción de conclusiones y aprendizaje, a partir de los incidentes de seguridad registrados?
+    min_level: BASICA
+- id: op.exp.10
+  titulo: Protección de claves criptográficas
+  preguntas:
+  - id: q1
+    texto: ¿Se gestionan de forma segura las claves criptográficas?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se emplean algoritmos y parámetros autorizados por el CCN para generar las claves criptográficas?
+    min_level: MEDIA
+  - id: q3
+    texto: '¿Se emplean cifradores que cumplan con los requisitos establecidos en la guía CCN-STIC que sea de aplicación? NOTA: Por ejemplo, se dispone de la guía CCN-STIC 807 Criptología de empleo en el Esquema Nacional de Seguridad.'
+    min_level: ALTA
+- id: op.ext.1
+  titulo: Contratación y acuerdos de nivel de servicio
+  preguntas:
+  - id: q1
+    texto: ¿Se suscriben acuerdos de nivel de servicio con los proveedores, a la vez que se les requiere estar en posesión del correspondiente certificado de conformidad respecto al ENS?
+    min_level: BASICA
+- id: op.ext.2
+  titulo: Gestión diaria
+  preguntas:
+  - id: q1
+    texto: ¿Se dispone de mecanismos de seguimiento y supervisión del desarrollo del servicio, así como de reporte y coordinación ante posibles incidencias?
+    min_level: BASICA
+- id: op.ext.3
+  titulo: Protección de la cadena de suministro
+  preguntas:
+  - id: q1
+    texto: ¿Se analizan los riesgos y se adoptan medidas respecto a un posible incidente originado en la cadena de suministro?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se considera la cadena de suministro en el Plan de Continuidad de la organización y en sus pruebas?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se ha implementado un sistema de protección de los procesos y flujos de información en las relaciones en línea (online) entre los distintos integrantes de la cadena de suministro?
+    min_level: ALTA
+  - id: q4
+    texto: ¿Se mantiene actualizado un registro formal que contiene los detalles y las relaciones de la cadena de suministro de los diversos componentes utilizados en la construcción de programas informáticos, acorde a lo especificado en [mp.sw.1.r5]? NOTA Esta lista será proporcionada por el proveedor de la aplicación, librería o producto suministrado
+    min_level: ALTA
+- id: op.ext.4
+  titulo: Interconexión de sistemas
+  preguntas:
+  - id: q1
+    texto: '¿Requieren autorización y se documentan todas las interconexiones de sistemas? NOTA: Se dispone la Guía CCN-STIC 811 sobre Interconexión en el ENS'
+    min_level: BASICA
+  - id: q2
+    texto: Cuando se interconecten sistemas en los que la identificación, autenticación y autorización tengan lugar en diferentes dominios de seguridad, bajo distintas responsabilidades, ¿se acompañan las medidas de seguridad locales de los correspondientes mecanismos y procedimientos de coordinación para la atribución y ejercicio efectivos de las responsabilidades de cada sistema?
+    min_level: MEDIA
+- id: op.nub.1
+  titulo: Protección de servicios en la nube
+  preguntas:
+  - id: q1
+    texto: ¿Los sistemas de información que soportan servicios prestados desde la nube cumplen con las medidas de seguridad pertinentes?
+    min_level: BASICA
+- id: op.cont.1
+  titulo: Análisis de impacto
+  preguntas:
+  - id: q1
+    texto: ¿Se ha realizado un análisis de impacto (BIA) en los servicios en el ámbito del ENS?
+    min_level: BASICA
+- id: op.cont.2
+  titulo: Plan de continuidad
+  preguntas:
+  - id: q1
+    texto: ¿Se dispone de un Plan de Continuidad documentado, coherente con los resultados del BIA?
+    min_level: BASICA
+  - id: q2
+    texto: 'Partiendo del Plan de Continuidad general ¿existen definidos planes de emergencia, contingencia o recuperación, en consonancia? NOTA: Si se realiza el Plan de Continuidad considerando diferentes escenarios de contingencia, puede establecerse para dichos escenarios un conjunto de Planes de Recuperación ante Desastres (DRP) específicos.'
+    min_level: MEDIA
+  - id: q3
+    texto: Ante una caída o discontinuidad del sistema, ¿se comprueba la integridad del sistema operativo, firmware y ficheros de configuración de los equipos afectados?
+    min_level: ALTA
+- id: op.cont.3
+  titulo: Pruebas periódicas
+  preguntas:
+  - id: q1
+    texto: ¿Se realizan pruebas periódicas del Plan de Continuidad?
+    min_level: BASICA
+- id: op.cont.4
+  titulo: Medios alternativos
+  preguntas:
+  - id: q1
+    texto: ¿Está prevista la disponibilidad de medios alternativos para poder seguir prestando servicio cuando los medios habituales no estén disponibles?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se cubren los elementos relevantes del sistema?
+    min_level: BASICA
+  - id: q3
+    texto: ¿Dispone el sistema de elementos hardware y/o software que permitan la transferencia de los servicios automáticamente a los medios alternativos?
+    min_level: MEDIA
+- id: op.mon.1
+  titulo: Detección de intrusión
+  preguntas:
+  - id: q1
+    texto: ¿Se dispone de herramientas de detección y/o prevención de intrusiones (IDS/IPS)?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Dispone el sistema de herramientas de detección y/o prevención de intrusiones basadas en reglas?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se dispone de procedimientos de respuesta a las alertas generadas por el sistema de detección y/o prevención de intrusiones?
+    min_level: ALTA
+  - id: q4
+    texto: ¿El sistema ejecuta automáticamente acciones predeterminadas de respuesta a las alertas generadas
+    min_level: ALTA
+- id: op.mon.2
+  titulo: Sistema de métricas
+  preguntas:
+  - id: q1
+    texto: Atendiendo a la categoría de seguridad del sistema, ¿se recopilan los datos necesarios para conocer el grado de implementación de las medidas de seguridad que resulten aplicables y, en su caso, tratándose de organizaciones en el ámbito del ENS para proveer el informe anual requerido por el artículo 32 (Informe INES)?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se evalúa el comportamiento del sistema de gestión de incidentes implementado en la organización?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se evalúa la eficiencia del sistema de gestión de la seguridad?
+    min_level: ALTA
+- id: op.mon.3
+  titulo: Vigilancia
+  preguntas:
+  - id: q1
+    texto: ¿Se dispone de un sistema automático de recolección de eventos de seguridad?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se dispone de un sistema que permita la correlación de eventos?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se dispone de análisis dinámico de vulnerabilidades?
+    min_level: ALTA
+  - id: q4
+    texto: ¿Se dispone de sistemas para detección de amenazas avanzadas?
+    min_level: ALTA
+  - id: q5
+    texto: ¿Se dispone de observatorios de cibervigilancia, propios o contratados como prestación de servicios?
+    min_level: ALTA
+  - id: q6
+    texto: ¿Se dispone de medidas frente a la minería de datos?
+    min_level: ALTA
+  - id: q7
+    texto: ¿Se realizan inspecciones y auditorías técnicas periódicamente o tras un incidente?
+    min_level: ALTA
+  - id: q8
+    texto: En las interconexiones que lo requieran ¿Se aplican controles en los flujos de intercambio de información a través del uso de metadatos?
+    min_level: ALTA
+- id: mp.if.1
+  titulo: Áreas separadas y con control de acceso
+  preguntas:
+  - id: q1
+    texto: ¿Se instala el equipamiento del sistema de información en áreas dotadas de adecuadas medidas de seguridad?
+    min_level: BASICA
+- id: mp.if.2
+  titulo: Identificación de las personas
+  preguntas:
+  - id: q1
+    texto: ¿Se dispone de una sistemática de control de acceso a los CPD?
+    min_level: BASICA
+- id: mp.if.3
+  titulo: Acondicionamiento de los locales
+  preguntas:
+  - id: q1
+    texto: ¿Se acondicionan y controlan ambientalmente los locales donde se ubica el equipamiento y componentes esenciales de los sistemas de información, así como se dispone en ellos de un trazado organizado e identificado de los cables de señal y de alimentación?
+    min_level: BASICA
+- id: mp.if.4
+  titulo: Energía eléctrica
+  preguntas:
+  - id: q1
+    texto: Los locales donde se ubican los sistemas de información y sus componentes esenciales (CPD, sala técnica), ¿disponen de tomas de energía eléctrica adecuadas, de modo que se garantice tanto el suministro como el correcto funcionamiento de las luces de emergencia?
+    min_level: BASICA
+  - id: q2
+    texto: 'En caso de fallo del suministro principal, ¿se garantiza el abastecimiento eléctrico durante el tiempo requerido, de forma armonizada con el BIA? ¿se realizan pruebas de carga o en vacío de los grupos electrógenos? NOTA: La exigencia de esta medida será variable en función del tamaño del CPD y de la criticidad de los sistemas de información albergados, contemplándose en el análisis de riesgos y/o en el BIA.'
+    min_level: MEDIA
+- id: mp.if.5
+  titulo: Protección frente a incendios
+  preguntas:
+  - id: q1
+    texto: 'Los locales donde se ubican los sistemas de información y sus componentes esenciales (CPD y salas técnicas) ¿están protegidos frente a los incendios atendiendo, al menos, a la normativa industrial de aplicación? NOTA: La exigencia de esta medida será variable en función del tamaño del CPD y de la criticidad de los sistemas de información albergados, contemplándose en el análisis de riesgos. En ocasiones, será necesario disponer de sistemas de extinción automática.'
+    min_level: BASICA
+- id: mp.if.6
+  titulo: Protección frente a inundaciones
+  preguntas:
+  - id: q1
+    texto: 'Los locales donde se ubican los sistemas de información y sus componentes esenciales ¿están protegidos frente a incidentes causados por el agua? NOTA: En función de la ubicación del CPD (Sótano o planta elevada), de la existencia de suelo técnico, etc., podrá variar el nivel de exigencia de esta medida (empleo de detectores de líquidos, bombas de achique automáticas, etc.)'
+    min_level: BASICA
+- id: mp.if.7
+  titulo: Registro de entrada y salida de equipamiento
+  preguntas:
+  - id: q1
+    texto: Categoría / dimensión
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se lleva un registro pormenorizado de cualquier entrada y salida de equipamiento esencial, incluyendo la identificación de la persona que autoriza el movimiento?
+    min_level: BASICA
+- id: mp.per.1
+  titulo: Caracterización del puesto de trabajo
+  preguntas:
+  - id: q1
+    texto: con el manejo de información o servicios en el ámbito del ENS, ¿se definen las responsabilidades en materia de seguridad?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Disponen los administradores de seguridad/sistema una Habilitación Personal de Seguridad (HPS) otorgada por la autoridad competente, como consecuencia de los resultados del análisis de riesgos previo, o como requisito de seguridad, de un sistema específico?
+    min_level: MEDIA
+- id: mp.per.2
+  titulo: Deberes y obligaciones
+  preguntas:
+  - id: q1
+    texto: ¿Se han definido, y se informa, a cada persona que trabaja en el sistema, de los deberes y responsabilidades de su puesto de trabajo en materia de seguridad?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se obtiene la confirmación expresa por parte de los usuarios de conocer las instrucciones de seguridad necesarias y obligatorias, así como los procedimientos necesarios para llevarlas a cabo de manera adecuada?
+    min_level: MEDIA
+- id: mp.per.3
+  titulo: Concienciación
+  preguntas:
+  - id: q1
+    texto: ¿Se realizan las acciones necesarias para concienciar regularmente al personal acerca de su papel y responsabilidad para que la seguridad del sistema alcance los niveles exigidos?
+    min_level: BASICA
+- id: mp.per.4
+  titulo: Formación
+  preguntas:
+  - id: q1
+    texto: ¿Se forma regularmente al personal de la organización en aquellas materias relativas a seguridad de la información que requiera el desempeño de sus funciones?
+    min_level: BASICA
+- id: mp.eq.1
+  titulo: Puesto de trabajo despejado
+  preguntas:
+  - id: q1
+    texto: '¿Los puestos de trabajo permanecen despejados, sin que exista material distinto del necesario en cada momento? NOTA: Entendemos por ''material'' a todo tipo de soportes conteniendo información calificada como ''no pública'' (lápices USB, papeles, etc.)'
+    min_level: BASICA
+  - id: q2
+    texto: 'Una vez usado, y siempre que sea factible, ¿el material se almacena en lugar cerrado? NOTA: Se entiende por ''lugar cerrado'' aquel asegurado por un sistema de cierre, por ejemplo, los cajones del escritorio, armarios o taquillas.'
+    min_level: MEDIA
+- id: mp.eq.2
+  titulo: Bloqueo del puesto de trabajo
+  preguntas:
+  - id: q1
+    texto: ¿El puesto de trabajo se bloquea al cabo de un tiempo prudencial de inactividad, requiriendo una nueva autenticación del usuario para reanudar la actividad en curso?
+    min_level: BASICA
+  - id: q2
+    texto: Pasado un cierto tiempo, superior al de bloqueo, ¿se cancelan todas las sesiones abiertas desde dicho puesto de trabajo?
+    min_level: MEDIA
+- id: mp.eq.3
+  titulo: Protección de dispositivos portátiles
+  preguntas:
+  - id: q1
+    texto: ¿Se adopta un conjunto de medidas que permita mantener la protección de los equipos portátiles, especialmente los que abandonan el perímetro físico de la organización, a niveles acordes con los requerimientos de seguridad?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se protege el portátil mediante cifrado del disco duro cuando el nivel de confidencialidad de la información almacenada en el mismo sea de nivel MEDIO?
+    min_level: MEDIA
+  - id: q3
+    texto: El uso de equipos portátiles fuera de las instalaciones de la organización, ¿se restringe a entornos protegidos, donde el acceso sea controlado, a salvo de hurtos y miradas indiscretas?
+    min_level: ALTA
+- id: mp.eq.4
+  titulo: Otros equipos conectados a la red
+  preguntas:
+  - id: q1
+    texto: ¿Se controlan los dispositivos presentes en el sistema, especialmente en lo que se refiere al flujo de información y su almacenamiento?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se emplean, cuando sea posible, productos o servicios que cumplan lo establecido en la medida [op.pl.5] sobre componentes certificados?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se dispone de soluciones que permitan visualizar los dispositivos presentes en la red, controlar su conexión/desconexión a la misma y verificar su configuración de seguridad?
+    min_level: ALTA
+- id: mp.com.1
+  titulo: Perímetro seguro
+  preguntas:
+  - id: q1
+    texto: '¿Se dispone de algún sistema que asegure el perímetro lógico? NOTA: Dispositivos del tipo Cortafuegos, o de naturaleza similar.'
+    min_level: BASICA
+- id: mp.com.2
+  titulo: Protección de la confidencialidad
+  preguntas:
+  - id: q1
+    texto: ¿Se emplean redes privadas virtuales cuando la comunicación discurre por redes fuera del propio dominio de seguridad, por lo que deba cifrarse?
+    min_level: BASICA
+  - id: q2
+    texto: '¿Se emplean algoritmos y parámetros autorizados por el CCN para cifrar las comunicaciones que discurran fuera del dominio de seguridad? NOTA: Se dispone de las guías CCN-STIC 836 Seguridad en Redes Privadas Virtuales (VPN) y CCN-STIC 807 Criptología de empleo en el ENS.'
+    min_level: MEDIA
+  - id: q3
+    texto: Mp.com.2.r3 Respecto a las VPN ¿se emplean dispositivos con garantías adicionales?
+    min_level: ALTA
+  - id: q4
+    texto: ¿Se emplean cifradores que cumplan con los requisitos establecidos en la guía CCN-STIC que sea de aplicación?
+    min_level: ALTA
+  - id: q5
+    texto: ¿Se cifra toda la información transmitida?
+    min_level: ALTA
+- id: mp.com.3
+  titulo: Protección de la integridad y de la autenticidad
+  preguntas:
+  - id: q1
+    texto: ¿Se emplean mecanismos para garantizar la autenticidad y la integridad de las comunicaciones con el exterior?
+    min_level: BASICA
+  - id: q2
+    texto: Mp.com.3.r2 ¿Se protegen las comunicaciones mediante redes privadas virtuales (VPN)?
+    min_level: MEDIA
+  - id: q3
+    texto: Mp.com.3.r4 ¿Se emplean dispositivos con garantías adicionales respecto a las VPN?
+    min_level: ALTA
+- id: mp.com.4
+  titulo: Separación de flujos de información en la red
+  preguntas:
+  - id: q1
+    texto: ¿Se ha segmentado la red, segregando el tráfico?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se han segregado al menos 3 segmentos de red mediante VLAN?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se han implementado los segmentos de red por medio de redes privadas virtuales (Virtual Private Network - VPN)?
+    min_level: ALTA
+  - id: q4
+    texto: ¿Se han implementado los segmentos de red con medios físicos separados?
+    min_level: ALTA
+  - id: q5
+    texto: ¿Se dispone de controles de entrada a los segmentos, así como monitorización?
+    min_level: ALTA
+- id: mp.si.1
+  titulo: Marcado de soportes
+  preguntas:
+  - id: q1
+    texto: '¿Se identifican los soportes que contienen información sensible con el nivel de seguridad de mayor calificación de la información contenida? NOTA: El concepto soportes de información incluye al papel impreso, pendrives, discos externos, DVD, etc.'
+    min_level: BASICA
+  - id: q2
+    texto: ¿La organización determina el empleo de marcas de agua para garantizar un uso adecuado de la información digital, llevándolo a la práctica?
+    min_level: MEDIA
+- id: mp.si.2
+  titulo: Criptografía
+  preguntas:
+  - id: q1
+    texto: '¿Se emplean mecanismos criptográficos para proteger los dispositivos removibles cuando es necesario? NOTA: se entiende por dispositivos removibles a los soportes tipo CD, DVD, discos extraíbles, pendrives, memorias USB, y otros de naturaleza análoga.'
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se emplean productos certificados conforme a lo establecido en [op.pl.5] sobre componentes certificados?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Las copias se seguridad se cifran utilizando algoritmos y parámetros autorizados por el CCN?
+    min_level: ALTA
+- id: mp.si.3
+  titulo: Custodia
+  preguntas:
+  - id: q1
+    texto: ¿Se garantiza la seguridad en la custodia de los soportes de información?
+    min_level: BASICA
+- id: mp.si.4
+  titulo: Transporte
+  preguntas:
+  - id: q1
+    texto: ¿Se garantiza la seguridad en el transporte de los soportes de información?
+    min_level: BASICA
+- id: mp.si.5
+  titulo: Borrado y destrucción
+  preguntas:
+  - id: q1
+    texto: ¿Se garantiza el borrado seguro o la destrucción de los soportes tras su utilización?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se emplean productos o servicios que cumplen lo establecido en [op.pl.5] sobre componentes certificados?
+    min_level: MEDIA
+  - id: q3
+    texto: Una vez finalizado el ciclo de vida del soporte de información ¿Es destruido éste de forma segura conforme a los criterios establecidos por el CCN?
+    min_level: ALTA
+- id: mp.sw.1
+  titulo: Desarrollo de aplicaciones
+  preguntas:
+  - id: q1
+    texto: '¿Está separado a todos los efectos el entorno de desarrollo del de producción? NOTA: habitualmente se dispone de entornos de desarrollo, preproducción o test, y producción.'
+    min_level: BASICA
+  - id: q2
+    texto: ¿Las aplicaciones se desarrollarán respetando el principio de mínimo privilegio (con los privilegios que sean indispensables), accediendo únicamente a los recursos imprescindibles para su función?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se aplica una metodología de desarrollo seguro reconocida?
+    min_level: ALTA
+  - id: q4
+    texto: ¿Se tienen en cuenta aspectos de seguridad como parte integral del diseño del sistema?
+    min_level: ALTA
+  - id: q5
+    texto: ¿Se aseguran los datos reales empleados para las pruebas previas, evitando su uso en la medida de lo posible?
+    min_level: ALTA
+  - id: q6
+    texto: '¿El desarrollador elabora y mantiene actualizada una relación formal de los componentes software de terceros empleados en la aplicación o producto? NOTA: Se mantendrá un histórico de los componentes utilizados en las diferentes versiones del software. El contenido mínimo de la lista de componentes, que contendrá, al menos, la identificación del componente, el fabricante y la versión empleada, se concretará en una guía CCN-STIC del CCN.'
+    min_level: ALTA
+- id: mp.sw.2
+  titulo: Aceptación y puesta en servicio
+  preguntas:
+  - id: q1
+    texto: Antes de su paso a producción, ¿se comprueba el correcto funcionamiento de la aplicación y de sus aspectos de seguridad?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Caso de aplicaciones desarrolladas externamente implementadas en modo local (on-premise), el proveedor aporta suficientes evidencias de la seguridad de la aplicación?
+    min_level: BASICA
+  - id: q3
+    texto: ¿Se realizan las pruebas en un entorno aislado de preproducción?
+    min_level: MEDIA
+  - id: q4
+    texto: ¿Se realizan auditorías de código fuente?
+    min_level: ALTA
+- id: mp.info.1
+  titulo: Datos personales
+  preguntas:
+  - id: q1
+    texto: Cuando el sistema trate datos personales, ¿el Responsable de Seguridad recoge los requisitos de protección de datos que sean fijados por el responsable o por el encargado del tratamiento, contando con el asesoramiento del DPD, y que sean necesarios implementar en los sistemas de acuerdo a la naturaleza, alcance, contexto y fines del mismo, así como de los riesgos para los derechos y libertades de acuerdo a lo establecido en los artículos 24 y 32 del RGPD, y de acuerdo a la evaluación de impacto en la protección de datos, si se ha llevado a cabo?
+    min_level: BASICA
+- id: mp.info.2
+  titulo: Calificación de la información
+  preguntas:
+  - id: q1
+    texto: ¿Se han establecido criterios de calificación (o clasificación si se trata de información clasificada en base a la LSO o tratados internacionales) que permitan ajustar los requisitos de seguridad a dichos criterios?
+    min_level: BASICA
+- id: mp.info.3
+  titulo: Firma electrónica
+  preguntas:
+  - id: q1
+    texto: ¿Se emplea un tipo de firma electrónica previsto en el vigente ordenamiento jurídico?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Cuándo se emplean sistemas de firma electrónica avanzada, basados en certificados, éstos son cualificados?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se emplean algoritmos y parámetros de cifrado autorizados por el CCN o por un esquema nacional o europeo?
+    min_level: ALTA
+  - id: q4
+    texto: 'Cuando proceda, ¿se garantiza la verificación y validación de la firma electrónica durante el tiempo requerido por la actividad administrativa que aquélla soporte, sin perjuicio de que se pueda ampliar este período de acuerdo con lo establecido en la Política de Firma Electrónica y de Certificados que sea de aplicación? NOTA: A tal fin se adjuntará a la firma, o se referenciará, toda la información pertinente para su verificación y validación.'
+    min_level: ALTA
+  - id: q5
+    texto: ¿Se usará firma electrónica avanzada basada en certificados cualificados complementada por un segundo factor del tipo «algo que se sabe» o «algo que se es»?
+    min_level: ALTA
+  - id: q6
+    texto: ¿Se usa firma electrónica cualificada, empleando productos certificados conforme a lo establecido en [op.pl.5]?
+    min_level: ALTA
+- id: mp.info.4
+  titulo: Sellos de tiempo
+  preguntas:
+  - id: q1
+    texto: ¿Se adoptan determinadas cautelas para la utilización de sellos de tiempo?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se emplean productos certificados?
+    min_level: MEDIA
+- id: mp.info.5
+  titulo: Limpieza de documentos
+  preguntas:
+  - id: q1
+    texto: ¿Se retira de los documentos electrónicos toda la información adicional contenida en campos ocultos, metadatos, comentarios o revisiones anteriores, salvo
+    min_level: BASICA
+- id: mp.info.6
+  titulo: Copias de seguridad
+  preguntas:
+  - id: q1
+    texto: ¿Se realizan copias de seguridad que permitan recuperar los datos perdidos accidental o intencionadamente?
+    min_level: BASICA
+  - id: q2
+    texto: ¿La organización ha establecido y aprobado procedimientos formales de copia de seguridad y restauración?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se preservan las copias de seguridad de aquellos riesgos que también podrían afectar a la información original?
+    min_level: ALTA
+- id: mp.s.1
+  titulo: Protección del correo electrónico
+  preguntas:
+  - id: q1
+    texto: ¿Se protege el correo electrónico frente a las amenazas que le son propias?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se protege a la organización frente a problemas que se materializan por medio del correo electrónico?
+    min_level: BASICA
+  - id: q3
+    texto: ¿Se han establecido para el personal normas de uso seguro del correo electrónico?
+    min_level: BASICA
+- id: mp.s.2
+  titulo: Protección de servicios y aplicaciones web
+  preguntas:
+  - id: q1
+    texto: Cuando la información requiera control de acceso ¿Se garantiza la imposibilidad de acceder a la información obviando la autenticación?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se realizan auditorías de seguridad de 'caja negra' sobre las aplicaciones web?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se realizan auditorías de seguridad de 'caja blanca' sobre las aplicaciones web?
+    min_level: ALTA
+  - id: q4
+    texto: ¿Se prevendrán ataques de manipulación de programas o dispositivos que realizan una acción en representación de otros, conocidos en terminología inglesa como "proxies" y, sistemas especiales de almacenamiento de alta velocidad, conocidos en terminología inglesa como "cachés"?
+    min_level: ALTA
+- id: mp.s.3
+  titulo: Protección de la navegación web
+  preguntas:
+  - id: q1
+    texto: ¿Se protege, frente a las amenazas que le son propias, el acceso de los usuarios internos a navegar por internet?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se han establecido restricciones a la navegación y monitorización de la misma?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se ha establecido una lista blanca de destinos accesibles, de modo que todo acceso fuera de los lugares en la lista blanca esté vetado, salvo autorización singular expresa?
+    min_level: ALTA
+- id: mp.s.4
+  titulo: Protección frente a la denegación de servicio
+  preguntas:
+  - id: q1
+    texto: ¿Se han establecido medidas preventivas frente a ataques de denegación de servicio (DoS) y denegación de servicio distribuido (DDoS)?
+    min_level: BASICA
+  - id: q2
+    texto: ¿Se han establecido sistemas detección, notificación y tratamiento de ataques de DoS o DDoS?
+    min_level: MEDIA
+  - id: q3
+    texto: ¿Se detecta y se evita el lanzamiento de ataques desde las propias instalaciones, perjudicando a terceros?
+    min_level: ALTA
